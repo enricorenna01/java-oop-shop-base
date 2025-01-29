@@ -8,12 +8,12 @@ public class Prodotto {
     int codice;
     String nome;
     String descrizione;
-    float prezzo;
-    float iva;
+    double prezzo;
+    double iva;
 
 
     //Metodi
-    public Prodotto(String nome, String descrizione, float prezzo, float iva){
+    public Prodotto(String nome, String descrizione, double prezzo, double iva){
         Random rand = new Random();
         this.codice = rand.nextInt(777777);
         this.nome = nome;
@@ -22,11 +22,11 @@ public class Prodotto {
         this.iva = iva;
     }
 
-    public float prezzoBase(){
+    public double prezzoBase(){
         return this.prezzo;
     }
 
-    public float prezzoIva(){
+    public double prezzoIva(){
         return this.prezzo + this.prezzo * this.iva;
     }
 
